@@ -13,9 +13,7 @@
                 <div class="carousel-inner" role="listbox">
                 {% for image in all_images %}
                     <div class="item {% if forloop.first %}active{% endif %}">
-                        {% thumbnail image.original "440x400" upscale=False as thumb %}
-                        <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />
-                        {% endthumbnail %}
+                        <img src="{{ image.original.url }}" alt="{{ product.get_title }}" />
                     </div>
                 {% endfor %}
                 </div>
